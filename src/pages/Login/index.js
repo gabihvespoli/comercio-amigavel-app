@@ -9,7 +9,7 @@ import {
   Switch,
 } from "react-native";
 
-function Home() {
+function Login() {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   return (
@@ -22,10 +22,10 @@ function Home() {
       </View>
       <View style={styles.content}>
         <View style={styles.head}>
-          <Text style={{ fontSize: 20, fontWeight: "bold", color: "#5F5F5F" }}>
+          <Text style={{ fontSize: 25, fontWeight: "bold", color: "#5F5F5F" }}>
             Fazer login
           </Text>
-          <Text style={{ color: "#007BFF" }}>Criar uma conta</Text>
+          <Text style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}>Criar uma conta</Text>
         </View>
         <TextInput style={styles.inputTop} placeholder={"E-mail"}></TextInput>
         <TextInput
@@ -42,15 +42,15 @@ function Home() {
               onValueChange={toggleSwitch}
               value={isEnabled}
             />
-            <Text style={{ color: "#5F5F5F" }}>Lembrar-me</Text>
+            <Text style={{ fontSize: 15, fontWeight: "300", color: "#5F5F5F" }}>Lembrar-me</Text>
           </View>
-          <Text style={{ color: "#007BFF" }}>Esqueci minha senha</Text>
+          <Text style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}>Esqueci minha senha</Text>
         </View>
         <TouchableOpacity style={styles.button}>
-          <Text style={{ color: "#FFF" }}>Entrar</Text>
+          <Text style={{ color: "#FFF", fontSize: 20 }}>Entrar</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
-export default Home;
+export default Login;
