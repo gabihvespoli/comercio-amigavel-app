@@ -7,6 +7,7 @@ import Login from './src/pages/Login';
 import CadVendedor from './src/pages/CadVendedor';
 import CadCliente from './src/pages/CadCliente';
 import CadConcluido from './src/pages/CadConcluido';
+import Mei from './src/pages/Mei';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <Cadastro /> */}
       {/* <CadVendedor /> */}
       {/* <CadCliente/> */}
-      <CadConcluido/>
+      {/* <CadConcluido/> */}
+      <Mei/>
       <StatusBar style="auto" />
     </View>
   );
