@@ -16,7 +16,7 @@ function Login() {
     <View style={styles.container}>
       <View style={styles.topo}>
         <Image
-          source={require("../../assets/logo-comercio-amigavel.png")}
+          source={require("../../../assets/logo-comercio-amigavel.png")}
           style={styles.logo}
         />
       </View>
