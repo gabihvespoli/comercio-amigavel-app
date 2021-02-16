@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     height: 64,
   },
   buttonP: {
-    height: 300,
+    height: 200,
     width: 160,
     padding: 10,
     borderRadius: 10,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#007BFF",
   },
   buttonG: {
-    height: 300,
+    height: 200,
     width: 330,
     padding: 10,
     borderRadius: 10,

@@ -8,16 +8,20 @@ import CadVendedor from './src/pages/CadVendedor';
 import CadCliente from './src/pages/CadCliente';
 import CadConcluido from './src/pages/CadConcluido';
 import Mei from './src/pages/Mei';
+import Anuncios from './src/pages/Anuncios';
+import Perfil from './src/pages/Perfil';
 
 function App() {
   return (
     <View>
-      {/* <Login /> */}
-      {/* <Cadastro /> */}
-      {/* <CadVendedor /> */}
-      {/* <CadCliente/> */}
-      {/* <CadConcluido/> */}
-      <Mei/>
+      {/* <Login />
+      <Cadastro />
+      <CadVendedor />
+      <CadCliente/>
+      <CadConcluido/>
+      <Mei/> */}
+      {/* <Anuncios /> */}
+      <Perfil/>
       <StatusBar style="auto" />
     </View>
   );
