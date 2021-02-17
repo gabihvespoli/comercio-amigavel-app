@@ -23,10 +23,11 @@ const styles = StyleSheet.create({
   },
   topo: {
     backgroundColor: "#E2E2E2",
-    height: 280,
+    height: 200,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   logo: {
-    alignSelf: "center",
     margin: 50,
     width: 150,
     height: 150,

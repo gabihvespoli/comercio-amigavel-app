@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   head: {
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    marginTop: 70,
+    marginTop: 20,
     marginBottom: 20,
   },
   inputTop: {

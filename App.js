@@ -1,29 +1,15 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
 
-import Cadastro from './src/pages/Cadastro';
-import Login from './src/pages/Login';
-import CadVendedor from './src/pages/CadVendedor';
-import CadCliente from './src/pages/CadCliente';
-import CadConcluido from './src/pages/CadConcluido';
-import Mei from './src/pages/Mei';
-import Anuncios from './src/pages/Anuncios';
-import Perfil from './src/pages/Perfil';
+import { NavigationContainer } from "@react-navigation/native";
+import Routes from "./src/routes/index";
 
 function App() {
   return (
-    <View>
-      {/* <Login />
-      <Cadastro />
-      <CadVendedor />
-      <CadCliente/>
-      <CadConcluido/>
-      <Mei/> */}
-      {/* <Anuncios /> */}
-      <Perfil/>
+    <NavigationContainer>
+      <Routes />
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
 export default App;

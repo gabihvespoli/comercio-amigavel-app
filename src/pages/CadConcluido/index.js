@@ -2,14 +2,18 @@ import React from "react";
 import styles from "./styles.js";
 import { Text, View, TouchableOpacity, Image } from "react-native";
 
-import Success from '../../../assets/success.png';
+import Success from "../../../assets/success.png";
 
-function CadConcluido() {
+function CadConcluido({ navigation }) {
+  function navigateToLogin() {
+    navigation.navigate("Login");
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         <View style={styles.head}>
-          <Image source={Success} style={styles.logo}/>
+          <Image source={Success} style={styles.logo} />
           <Text
             style={{
               marginBottom: 20,
@@ -24,8 +28,8 @@ function CadConcluido() {
             Agora você faz parte do Comércio Amigável!
           </Text>
         </View>
-        
-        <TouchableOpacity style={styles.button}>
+
+        <TouchableOpacity style={styles.button} onPress={navigateToLogin}>
           <Text style={{ color: "#FFF", fontSize: 20 }}>Entrar</Text>
         </TouchableOpacity>
       </View>

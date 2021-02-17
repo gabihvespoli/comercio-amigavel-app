@@ -68,6 +68,18 @@ const styles = StyleSheet.create({
   buttonCurso2: {
     backgroundColor: "#F69220",
   },
+  button: {
+    height: 50,
+    width: '45%',
+    padding: 10,
+    marginHorizontal: 5,
+    borderRadius: 10,
+    backgroundColor: "#007BFF",
+    color: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 10,
+  },
 });
 
 export default styles;

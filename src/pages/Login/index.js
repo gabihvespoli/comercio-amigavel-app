@@ -3,17 +3,27 @@ import styles from "./styles.js";
 import {
   Text,
   View,
+  ScrollView,
+  KeyboardAvoidingView,
   Image,
   TextInput,
   TouchableOpacity,
   Switch,
 } from "react-native";
 
-function Login() {
+function Login({ navigation }) {
+  function navigateToMei() {
+    navigation.navigate("Mei");
+  }
+  function navigateToCadastro() {
+    navigation.navigate("Cadastro");
+  }
+
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior="position" enabled>
       <View style={styles.topo}>
         <Image
           source={require("../../../assets/logo-comercio-amigavel.png")}
@@ -25,7 +35,12 @@ function Login() {
           <Text style={{ fontSize: 25, fontWeight: "bold", color: "#5F5F5F" }}>
             Fazer login
           </Text>
-          <Text style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}>Criar uma conta</Text>
+          <Text
+            style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}
+            onPress={navigateToCadastro}
+          >
+            Criar uma conta
+          </Text>
         </View>
         <TextInput style={styles.inputTop} placeholder={"E-mail"}></TextInput>
         <TextInput
@@ -42,15 +57,19 @@ function Login() {
               onValueChange={toggleSwitch}
               value={isEnabled}
             />
-            <Text style={{ fontSize: 15, fontWeight: "300", color: "#5F5F5F" }}>Lembrar-me</Text>
+            <Text style={{ fontSize: 15, fontWeight: "300", color: "#5F5F5F" }}>
+              Lembrar-me
+            </Text>
           </View>
-          <Text style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}>Esqueci minha senha</Text>
+          <Text style={{ fontSize: 15, fontWeight: "300", color: "#007BFF" }}>
+            Esqueci minha senha
+          </Text>
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={navigateToMei}>
           <Text style={{ color: "#FFF", fontSize: 20 }}>Entrar</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 export default Login;

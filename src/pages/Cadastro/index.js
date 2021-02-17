@@ -2,7 +2,14 @@ import React from "react";
 import styles from "./styles.js";
 import { Text, View, TouchableOpacity } from "react-native";
 
-function Cadastro() {
+function Cadastro({ navigation }) {
+  function navigateToCadVendedor() {
+    navigation.navigate("CadVendedor");
+  }
+  function navigateToCadCliente() {
+    navigation.navigate("CadCliente");
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -31,10 +38,10 @@ function Cadastro() {
         >
           O que deseja fazer?
         </Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={navigateToCadVendedor}>
           <Text style={{ color: "#FFF", fontSize: 20 }}>Vender</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={navigateToCadCliente}>
           <Text style={{ color: "#FFF", fontSize: 20 }}>Comprar</Text>
         </TouchableOpacity>
       </View>

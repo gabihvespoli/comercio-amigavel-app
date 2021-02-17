@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { Card, Button } from "react-native-elements";
 
 import apiProdutos from "./ApiProdutos";
@@ -59,10 +59,18 @@ function CardAnuncio() {
               {produto.doacao}
             </Text>
 
-            <Button
-              buttonStyle={{ borderRadius: 15, backgroundColor: "#28A745" }}
-              title="CONTATO"
-            />
+            <TouchableOpacity
+              style={{
+                height: 40,
+                padding: 10,
+                borderRadius: 15,
+                backgroundColor: "#28A745",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text style={{ color: "#FFF", fontSize: 20 }}>Contato</Text>
+            </TouchableOpacity>
           </Card>
         );
       })}
