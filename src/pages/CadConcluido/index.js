@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.js";
-import { Text, View, TouchableOpacity, Image } from "react-native";
+import { Text, View, TouchableOpacity, Image, ScrollView } from "react-native";
 
 import Success from "../../../assets/success.png";
 
@@ -10,7 +10,7 @@ function CadConcluido({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.head}>
           <Image source={Success} style={styles.logo} />
@@ -33,7 +33,7 @@ function CadConcluido({ navigation }) {
           <Text style={{ color: "#FFF", fontSize: 20 }}>Entrar</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 export default CadConcluido;

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.js";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, ScrollView } from "react-native";
 
 function Cadastro({ navigation }) {
   function navigateToCadVendedor() {
@@ -11,7 +11,7 @@ function Cadastro({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.head}>
           <Text
@@ -45,7 +45,7 @@ function Cadastro({ navigation }) {
           <Text style={{ color: "#FFF", fontSize: 20 }}>Comprar</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 export default Cadastro;
